@@ -13,7 +13,7 @@ I'm excited to share my Shopcart e-commerce project, converted into a React + Vi
 - Firebase integration for authentication and database operations
 - Vercel deployment configuration
 
-🛠️ **Technologies Used**
+ **Technologies Used**
 - React.js
 - Vite
 - JavaScript
