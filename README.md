@@ -28,9 +28,14 @@ This project has helped me strengthen my skills in frontend development, backend
 
 I'm looking forward to further improving Shopcart and expanding its functionality.
 
+**Admin Login**
 **Login details**
-*To add items and images on the site ;
-Admin login: bafanashangase007@gmail.com
-password: BafanaShangase
+
+Admin email: admin@gmail.com
+password: admin@123
+
+**To upload items**
+Email : bafanashangase@gmail.com
+Password : BafanaShangase
 
 #ReactJS #Vite #Supabase #Firebase #JavaScript #WebDevelopment #FullStackDevelopment #SoftwareDevelopment #Vercel #PortfolioProject
