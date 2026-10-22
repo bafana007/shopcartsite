@@ -1,41 +1,34 @@
-**# shopcartsite**
-**Project Showcase: Shopcart — React + Firebase + Supabase E-Commerce Application**
+# Shopcart | React + Firebase + Supabase E-Commerce Application
 
-I'm excited to share my Shopcart e-commerce project, converted into a React + Vite application while preserving the original user interface and existing backend integrations.
+I'm excited to showcase my **Shopcart e-commerce application**, converted into a React + Vite application while preserving the original user interface and existing backend integrations.
 
- **Project Features**
+The project demonstrates my practical experience in frontend development, backend integration, database management, payment integration, and application deployment.
+
+### Key Features
 - Responsive e-commerce interface
-- Product browsing and product details
-- Shopping cart and checkout pages
-- User login and profile pages
-- Admin dashboard
+- Product browsing and detailed product pages
+- Shopping cart and checkout functionality
+- User login and profile management
+- Admin dashboard for product management
 - Supabase integration for product data and image storage
 - Firebase integration for authentication and database operations
+- **PayPal payment method integrated into the checkout process**
 - Vercel deployment configuration
+- Live deployment hosted on Netlify
 
- **Technologies Used**
-- React.js
-- Vite
-- JavaScript
-- HTML5 and CSS3
+### Technologies Used
+- React.js and Vite
+- JavaScript, HTML5 and CSS3
 - Supabase
 - Firebase
+- PayPal integration
 - Git and GitHub
-- Vercel
+- Vercel and Netlify
 
-view live demo at (https://shopcartsites.netlify.app/)
-This project has helped me strengthen my skills in frontend development, backend integration, application structure, and deployment preparation. My goal is to continue building practical applications while improving my software development skills.
+**Live Demo:** https://shopcartsites.netlify.app/
 
-I'm looking forward to further improving Shopcart and expanding its functionality.
+This project has helped me strengthen my skills in building interactive web applications, integrating backend services, implementing payment functionality, and preparing applications for deployment.
 
-**Admin Login**
-**Login details**
+I'm looking forward to continuously improving Shopcart, adding new features, and growing as a software developer.
 
-Admin email: admin@gmail.com
-password: admin@123
-
-**To upload items**
-Email : bafanashangase@gmail.com
-Password : BafanaShangase
-
-#ReactJS #Vite #Supabase #Firebase #JavaScript #WebDevelopment #FullStackDevelopment #SoftwareDevelopment #Vercel #PortfolioProject
+#ReactJS #Vite #Supabase #Firebase #PayPal #JavaScript #WebDevelopment #FullStackDevelopment #SoftwareDevelopment #Ecommerce #GitHub #PortfolioProject
