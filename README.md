@@ -31,11 +31,10 @@ I'm excited to showcase my e-commerce development projects, **Shopcart** and **C
 
 ### Project Links
 
-**Shopcart — Live Demo:** https://shopcartsites.netlify.app/
+**Shopcart — Live Demo:** https://cart-with-paypal-git-main-bafanashangase007gmailcoms-projects.vercel.app/
 
-**Shopcart — Source Code:** https://github.com/bafana007/supabase-ecommerce
 
-**CartWithPaypal — Source Code:** https://github.com/bafana007/cartWithPaypal
+
 
 These projects have helped me strengthen my skills in frontend development, backend integration, database management, payment workflows, debugging, and application deployment.
 
