@@ -1,5 +1,5 @@
 **# shopcartsite**
-**Project Showcase: Shopcart — React + Supabase E-Commerce Application**
+**Project Showcase: Shopcart — React + Firebase + Supabase E-Commerce Application**
 
 I'm excited to share my Shopcart e-commerce project, converted into a React + Vite application while preserving the original user interface and existing backend integrations.
 
