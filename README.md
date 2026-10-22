@@ -2,7 +2,6 @@
 
 I'm excited to showcase my e-commerce development projects, **Shopcart** and **CartWithPaypal**, demonstrating my practical experience in building interactive online shopping applications, integrating backend services, implementing payment functionality, and deploying web applications.
 
-**Shopcart** was converted into a React + Vite application while preserving its original user interface and existing backend integrations. The project combines Firebase, Supabase, and PayPal to deliver a feature-rich e-commerce experience.
 
 **CartWithPaypal** further demonstrates my experience in developing shopping cart functionality, integrating PayPal checkout, and deploying applications using Vercel.
 
