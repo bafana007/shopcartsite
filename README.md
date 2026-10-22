@@ -33,6 +33,14 @@ I'm excited to showcase my e-commerce development projects, **Shopcart** and **C
 
 **Shopcart — Live Demo:** https://cart-with-paypal-brown.vercel.app/
 
+### Admin login
+- ** Email : Admin@gmail.com
+- ** Pass  : Admmin@123
+  
+## To Upload products
+- Admin email : Bafanashangase007@gmail.com
+- Password : BafanaShangase
+
 
 
 These projects have helped me strengthen my skills in frontend development, backend integration, database management, payment workflows, debugging, and application deployment.
