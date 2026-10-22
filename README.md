@@ -31,8 +31,7 @@ I'm excited to showcase my e-commerce development projects, **Shopcart** and **C
 
 ### Project Links
 
-**Shopcart — Live Demo:** https://cart-with-paypal-git-main-bafanashangase007gmailcoms-projects.vercel.app/
-
+**Shopcart — Live Demo:** https://cart-with-paypal-brown.vercel.app/
 
 
 
