@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create, update: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(['profile', 'cart', 'wishlist', 'updatedAt'])
+        && request.resource.data.profile is map
+        && request.resource.data.profile.keys().hasOnly(['name', 'email', 'address'])
+        && request.resource.data.cart is list
+        && request.resource.data.wishlist is list;
+      allow delete: if false;
+    }
+
+    match /orders/{orderId} {
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.keys().hasOnly([
+          'userId', 'customerName', 'customerEmail', 'deliveryAddress', 'items',
+          'subtotal', 'shipping', 'discount', 'total', 'paymentMethod', 'createdAt'
+        ])
+        && request.resource.data.items is list
+        && request.resource.data.items.size() <= 100
+        && request.resource.data.subtotal is number
+        && request.resource.data.shipping is number
+        && request.resource.data.discount is number
+        && request.resource.data.total == request.resource.data.subtotal
+          + request.resource.data.shipping - request.resource.data.discount
+        && request.resource.data.paymentMethod in ['cod', 'shopcart', 'paypal', 'card']
+        && request.resource.data.createdAt == request.time;
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+  }
+}
