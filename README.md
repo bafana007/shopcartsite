@@ -30,7 +30,8 @@ I'm excited to showcase my e-commerce development projects, **Shopcart** and **C
 
 ### Project Links
 
-**Shopcart — Live Demo:** https://final-ecomorce-project.vercel.app/
+**Shopcart — Live Demo:** cart-with-paypal-2.vercel.app
+
 
 ### Admin login
 -  Email : Admin@gmail.com
