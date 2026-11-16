@@ -126,3 +126,5 @@ Pay-on-delivery orders always start Pending and unpaid. Only an admin can move t
 - PayPal totals are computed in the browser. Verify amounts server-side before taking real payments (PayFast already does).
 - The SAVE10 coupon is checked in the browser only; the server just caps any discount at 10% of items.
 - The credit/debit card option is a demo and charges nothing.
+
+## Live Demo : https://cart-with-paypal-3.vercel.app/
