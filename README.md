@@ -1,52 +1,11 @@
-# Shopcart & CartWithPaypal | E-Commerce Web Development Projects
+# Shopcart (React)
 
-I'm excited to showcase my e-commerce development projects, **Shopcart** and **CartWithPaypal**, demonstrating my practical experience in building interactive online shopping applications, integrating backend services, implementing payment functionality, and deploying web applications.
-
-**Shopcart** is a React + Vite storefront (look, layout, copy, images and shopping logic of `shopcart-vanilla`) running on a real backend: Firebase (accounts, carts, orders, activity), Supabase (products and image uploads), PayFast and PayPal. Signed-in shoppers can upload products and sell them.
-
-**CartWithPaypal** further demonstrates my experience in developing shopping cart functionality, integrating PayPal checkout, and deploying applications using Vercel.
-
-## Key Features
-
-- Responsive e-commerce interfaces
-- Product browsing and detailed product pages
-- Shopping cart management and checkout functionality
-- User login (email and Google) and profile management, including profile pictures
-- Seller listings with admin approval
-- Admin dashboard for product management
-- Supabase integration for product data and image storage
-- Firebase integration for authentication and database operations
-- PayPal and PayFast payment integration
-- Direct-message inbox between users
-- Session tracking with remote sign-out
-- Deployment using Netlify and Vercel
-- GitHub version control and project management
-
-## Technologies Used
-
-- React.js and Vite
-- JavaScript, HTML5 and CSS3
-- Firebase (Authentication, Realtime Database)
-- Supabase (Postgres, Storage, Auth password reset)
-- PayPal and PayFast integration
-- Git and GitHub
-- Netlify and Vercel
-
-## Project Links
-
-**Shopcart: Live Demo:** https://cart-with-paypal-2.vercel.app
-
-## Demo Access
-
-- **Demo admin login:** Email `<demo-admin-email>`, Password `<demo-admin-password>`
-- **Upload / seller admin login:** Email `<admin-email>`, Password `<admin-password>`
-
-Credentials are intentionally not stored in this file. Share them privately with reviewers or recruiters on request.
+The Shopcart storefront (look, layout, copy, images and shopping logic of `shopcart-vanilla`) as a React + Vite app, running on the real backend: Firebase (accounts, carts, orders, activity), Supabase (products and image uploads), PayFast and PayPal. Signed-in shoppers can upload products and sell them.
 
 ## Set up (in this order)
 
 1. **Supabase SQL** (Supabase > SQL Editor). Fresh project: run `supabase/schema.sql`, then `supabase/seed.sql`. Existing project that already ran the old SQL: run `supabase/update.sql` once (safe to run twice). Seller listings: run `supabase/sellers.sql` to add the seller columns, approval status, and approved-only public read policy. `schema.sql` also creates the public `product-images` storage bucket.
-2. **Firebase rules**: publish `database.rules.json` (Realtime Database > Rules). This version adds the extra profile fields, unique usernames, the newsletter list, product-view activity and the order phone number. Compare with your live rules before replacing them.
+2. **Firebase rules**: publish `database.rules.json` (Realtime Database > Rules). This version adds the extra profile fields, unique usernames, the newsletter list, product-view activity, order phone number, per-recipient chat delivery/read receipts, and the unread message badge. Compare with your live rules before replacing them.
 3. **Environment**: copy `.env.example` to `.env` and fill it in. The `VITE_FIREBASE_*` values are required (the app shows a setup message without them); `VITE_SUPABASE_*` give you the live catalog, selling and profile pictures; the rest enable PayPal, PayFast and seller uploads on the server. Password reset is handled by Supabase Auth (see below).
 4. **Google sign-in**: in Firebase Authentication > Sign-in method, enable **Google** and add your authorized domains (`localhost` for local work). The login and create-account forms both offer a Google button; new Google accounts get a profile with their name and email (usernames are only chosen during email sign-up).
 5. `npm install`, then `npm run dev` (http://localhost:5173) or `npm run build`.
@@ -54,13 +13,6 @@ Credentials are intentionally not stored in this file. Share them privately with
 Add `localhost` and your production domain to Firebase Authentication's authorized domains. On Netlify/Vercel set the same variables in the dashboard; `public/_redirects` makes deep links such as `/product/3` work.
 
 `npm run dev` also serves the functions in `api/` (seller uploads, PayFast), so selling works locally once `SUPABASE_SERVICE_ROLE_KEY`, `FIREBASE_SERVICE_ACCOUNT` and `FIREBASE_DATABASE_URL` are in `.env`. PayFast cannot call back to `localhost`, so a payment finished locally stays Pending.
-
-## Deployment (Vercel)
-
-1. Push the repo to GitHub. The commit author email must be a verified email on the GitHub account that owns the repo (or your GitHub no-reply address), otherwise Vercel blocks the deployment.
-2. In Vercel choose **Add New > Project**, import the repo, and keep the detected Vite framework preset.
-3. Add all environment variables from `.env` in **Settings > Environment Variables** (client-side ones must start with `VITE_`).
-4. Deploy, then add the production domain to Firebase Authentication's authorized domains and to Supabase's Redirect URLs.
 
 ## Selling
 
@@ -108,7 +60,7 @@ supabase/     schema.sql, seed.sql, update.sql, sellers.sql (already included in
 
 - **Categories** are now Electronics, Fashion, Home, Food, Bags, Sports and Health & Beauty everywhere (shop, sell form, admin form, API). The old headphone categories were folded into Electronics by `update.sql`.
 - **Sign in is by email.** The username chosen at sign-up is unique and shown on the account page, but it cannot be used to log in (that would need a public username-to-email lookup).
-- **Messages** is now a Firebase Realtime Database direct-message inbox. Conversations are keyed by the two participant UIDs and are readable only by those participants; remove the browser-only demo conversation seed.
+- **Messages** is now a Firebase Realtime Database direct-message inbox. Conversations are keyed by the two participant UIDs and are readable only by those participants; admins can open **User support** from the admin sidebar to start a private conversation with any user. Support conversations also appear in that user's Messages inbox.
 - **Newsletter** sign-ups are stored at `newsletter/` in Realtime Database (only admins can read them).
 - Filters and sort order are remembered between visits; the category and search text come from the address bar so links and the Back button work.
 - Large vanilla photos were resized for the web (about 21 MB down to under 3 MB); file names are unchanged.
@@ -174,11 +126,3 @@ Pay-on-delivery orders always start Pending and unpaid. Only an admin can move t
 - PayPal totals are computed in the browser. Verify amounts server-side before taking real payments (PayFast already does).
 - The SAVE10 coupon is checked in the browser only; the server just caps any discount at 10% of items.
 - The credit/debit card option is a demo and charges nothing.
-
-## About
-
-These projects have helped me strengthen my skills in frontend development, backend integration, database management, payment workflows, debugging, and application deployment.
-
-I'm committed to continuously improving my projects, exploring new technologies, and growing as a software developer by building practical solutions.
-
-#ReactJS #Vite #Firebase #Supabase #PayPal #JavaScript #WebDevelopment #FullStackDevelopment #ECommerce #GitHub #Netlify #Vercel #SoftwareDevelopment #PortfolioProjects
